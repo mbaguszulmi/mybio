@@ -1,0 +1,612 @@
+@import url(/home/mbaguszulmi/Documents/Project/html/mybio/assets/fonts/Montserrat/Montserrat.css);
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body div.web-frame {
+  height: 100vh;
+  overflow: hidden;
+}
+
+body div.web-frame nav.main-nav {
+  height: 70px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 3px 32px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 3px 32px rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: 9999;
+}
+
+body div.web-frame nav.main-nav input.drawer-state {
+  position: absolute;
+  visibility: hidden;
+}
+
+body div.web-frame nav.main-nav div.nav-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 1210px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+body div.web-frame nav.main-nav div.nav-inner div.logo {
+  max-width: 76px;
+  max-height: 42px;
+  margin-right: auto;
+}
+
+body div.web-frame nav.main-nav div.nav-inner div.logo img {
+  max-width: 100%;
+  max-height: 42px;
+}
+
+body div.web-frame nav.main-nav div.nav-inner label.hamburger {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  cursor: pointer;
+  z-index: 1;
+}
+
+body div.web-frame nav.main-nav div.nav-inner label.hamburger div.bar1 {
+  width: 44px;
+  height: 6px;
+  background-color: #000;
+  border-radius: 3px;
+}
+
+body div.web-frame nav.main-nav div.nav-inner label.hamburger div.bar2 {
+  width: 58px;
+  height: 6px;
+  background-color: #000;
+  border-radius: 3px;
+  margin: 6px 0;
+}
+
+body div.web-frame nav.main-nav div.nav-inner label.hamburger div.bar3 {
+  width: 70px;
+  height: 6px;
+  background-color: #000;
+  border-radius: 3px;
+}
+
+body div.web-frame nav.main-nav input#open-drawer:checked ~ div.drawer-wrapper {
+  visibility: visible;
+}
+
+body div.web-frame nav.main-nav input#open-drawer:checked ~ div.drawer-wrapper label.drawer-out-space {
+  opacity: 0.25;
+}
+
+body div.web-frame nav.main-nav input#open-drawer:checked ~ div.drawer-wrapper div.drawer {
+  right: 0;
+}
+
+body div.web-frame nav.main-nav input#open-drawer:checked + div.nav-inner label.hamburger {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+body div.web-frame nav.main-nav input#open-drawer:checked + div.nav-inner label.hamburger div.bar1 {
+  width: 30px;
+  -webkit-transform: translate(-29px, 5px) rotate(-30deg);
+          transform: translate(-29px, 5px) rotate(-30deg);
+}
+
+body div.web-frame nav.main-nav input#open-drawer:checked + div.nav-inner label.hamburger div.bar3 {
+  width: 30px;
+  -webkit-transform: translate(-29px, -5px) rotate(30deg);
+          transform: translate(-29px, -5px) rotate(30deg);
+}
+
+body div.web-frame nav.main-nav div.drawer-wrapper {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+body div.web-frame nav.main-nav div.drawer-wrapper label.drawer-out-space {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0;
+}
+
+body div.web-frame nav.main-nav div.drawer-wrapper div.drawer {
+  width: 320px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: -320px;
+  background-color: #fff;
+}
+
+body div.web-frame nav.main-nav div.drawer-wrapper div.drawer div.drawer-inner {
+  margin-top: 102px;
+  max-height: calc(100vh - 102px);
+}
+
+body div.web-frame nav.main-nav div.drawer-wrapper div.drawer div.drawer-inner a {
+  display: block;
+  line-height: 46px;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0 40px;
+  color: #000;
+}
+
+body div.web-frame nav.main-nav div.drawer-wrapper div.drawer div.drawer-inner a.active, body div.web-frame nav.main-nav div.drawer-wrapper div.drawer div.drawer-inner a:hover {
+  background-color: #C4C4C4;
+}
+
+body div.web-frame div.content-wrapper {
+  height: calc(100vh - 70px);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+body div.web-frame div.content-wrapper header.header {
+  height: calc(100vh - 70px);
+  min-height: 606px;
+  background-color: #26333D;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+body div.web-frame div.content-wrapper header.header > * {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+body div.web-frame div.content-wrapper header.header div.avatar {
+  background: center/cover url("../images/bagus.jpg");
+  width: 286px;
+  height: 286px;
+  border-radius: 50%;
+  position: relative;
+}
+
+body div.web-frame div.content-wrapper header.header h1.name {
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 44px;
+  color: #fff;
+  margin: 34px 0;
+  position: relative;
+}
+
+body div.web-frame div.content-wrapper header.header div.message {
+  color: #fff;
+  font-size: 18px;
+  line-height: 22px;
+  font-style: italic;
+  position: relative;
+}
+
+body div.web-frame div.content-wrapper header.header div.moon {
+  width: 142px;
+  height: 142px;
+  background: center/cover url("../images/moon.png");
+  position: absolute;
+  left: 330px;
+  top: 343px;
+  -webkit-transition: none;
+  transition: none;
+}
+
+body div.web-frame div.content-wrapper header.header div.planet {
+  width: 570px;
+  height: 570px;
+  background: center/cover url("../images/planet.png");
+  position: absolute;
+  left: -122px;
+  top: 354px;
+  -webkit-transition: none;
+  transition: none;
+}
+
+body div.web-frame div.content-wrapper header.header div.commet {
+  width: 471px;
+  height: 301px;
+  background: center/cover url("../images/comet.png");
+  position: absolute;
+  right: -175px;
+  top: 50px;
+}
+
+body div.web-frame div.content-wrapper header.header div.scroll-down {
+  font-size: 36px;
+  color: #fff;
+  position: absolute;
+  bottom: 10px;
+  cursor: pointer;
+}
+
+body div.web-frame div.content-wrapper article.content {
+  background-color: #21547B;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+}
+
+body div.web-frame div.content-wrapper article.content div.commet-blue {
+  width: 700px;
+  height: 700px;
+  background: top left/378px 242px no-repeat url("../images/commet_blue.png");
+  position: absolute;
+  right: -463px;
+  top: 0;
+  -webkit-animation: commetblue 30s linear 0s infinite;
+          animation: commetblue 30s linear 0s infinite;
+}
+
+@-webkit-keyframes commetblue {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+@keyframes commetblue {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+body div.web-frame div.content-wrapper article.content h1.title {
+  font-size: 38px;
+  font-weight: 500;
+  line-height: 46px;
+}
+
+body div.web-frame div.content-wrapper article.content h1.title.center {
+  text-align: center;
+}
+
+body div.web-frame div.content-wrapper article.content div.intro {
+  position: relative;
+  height: calc(100vh - 70px);
+  min-height: 606px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+body div.web-frame div.content-wrapper article.content div.intro div.photo {
+  width: 682px;
+  height: 424px;
+  position: absolute;
+  left: -264px;
+  -webkit-box-shadow: 0px 8px 28px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 8px 28px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  background: center/cover url("../images/pearl.jpg");
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+body div.web-frame div.content-wrapper article.content div.intro div.intro-content {
+  width: calc(100% - 418px);
+  padding: 0 78px 0 50px;
+  overflow: hidden;
+  position: relative;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+body div.web-frame div.content-wrapper article.content div.intro div.intro-content p {
+  line-height: 30px;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+body div.web-frame div.content-wrapper article.content div.projects {
+  height: calc(100vh - 70px);
+  min-height: 606px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+body div.web-frame div.content-wrapper article.content div.projects div.tree {
+  position: absolute;
+  width: 386px;
+  height: 488px;
+  left: -107px;
+  bottom: 0;
+  background: center/cover url("../images/tree.png");
+  -webkit-transition: none;
+  transition: none;
+}
+
+body div.web-frame div.content-wrapper article.content div.projects div.grass {
+  position: absolute;
+  width: 100%;
+  height: 74px;
+  bottom: 0;
+  background: 0 bottom/contain repeat-x url("../images/grass.png");
+  -webkit-transition: none;
+  transition: none;
+}
+
+body div.web-frame div.content-wrapper article.content div.projects h1.title {
+  margin-bottom: 50px;
+}
+
+body div.web-frame div.content-wrapper article.content div.projects h1.title, body div.web-frame div.content-wrapper article.content div.projects div.project-slider {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+body div.web-frame div.content-wrapper article.content div.projects div.project-slider {
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: auto;
+  position: relative;
+  scrollbar-width: none;
+}
+
+body div.web-frame div.content-wrapper article.content div.projects div.project-slider::-webkit-scrollbar {
+  width: 0px;
+}
+
+body div.web-frame div.content-wrapper article.content div.projects div.project-slider div.project-slider-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 40px 36px 40px 51%;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  position: relative;
+}
+
+body div.web-frame div.content-wrapper article.content div.projects div.project-slider div.project-slider-inner > * {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+body div.web-frame div.content-wrapper article.content div.projects div.project-slider div.project-slider-inner div.project-illustration {
+  width: 347px;
+  height: 268px;
+  background: center/cover no-repeat url("../images/projects.png");
+  position: absolute;
+  left: 300px;
+  -webkit-transition: none;
+  transition: none;
+}
+
+body div.web-frame div.content-wrapper article.content div.projects div.project-slider div.project-slider-inner a.project {
+  text-decoration: none;
+  z-index: 2;
+}
+
+body div.web-frame div.content-wrapper article.content div.projects div.project-slider div.project-slider-inner a.project div.project-card {
+  width: 454px;
+  height: 268px;
+  -webkit-box-shadow: 0px 8px 26px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 8px 26px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  background-color: #C4C4C4;
+  margin-right: 36px;
+  background-size: cover;
+  background-position: center;
+}
+
+body div.web-frame div.content-wrapper article.content div.projects div.project-slider div.project-slider-inner a.project h3.project-title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #fff;
+}
+
+body div.web-frame div.content-wrapper article.content div.projects div.project-slider div.project-slider-inner a.more-project {
+  width: 226px;
+  height: 268px;
+  background-color: #16374F;
+  -webkit-box-shadow: 0px 8px 26px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 8px 26px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  margin-right: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  text-decoration: none;
+}
+
+body div.web-frame div.content-wrapper article.content div.projects div.project-slider div.project-slider-inner a.more-project div.right-btn {
+  font-size: 104px;
+  color: #fff;
+  opacity: 0.8;
+}
+
+body div.web-frame div.content-wrapper article.content div.projects div.project-slider div.project-slider-inner a.more-project span {
+  font-size: 18px;
+  line-height: 22px;
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  margin-top: 53px;
+}
+
+body div.web-frame div.content-wrapper footer.footer {
+  background-color: #26333D;
+  overflow: hidden;
+}
+
+body div.web-frame div.content-wrapper footer.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+body div.web-frame div.content-wrapper footer.footer a:hover {
+  text-decoration: underline;
+}
+
+body div.web-frame div.content-wrapper footer.footer div.footer-content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (400px)[3];
+      grid-template-columns: repeat(3, 400px);
+  padding: 115px 83px 18px;
+}
+
+body div.web-frame div.content-wrapper footer.footer div.footer-content h2.title {
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 44px;
+  color: #fff;
+}
+
+body div.web-frame div.content-wrapper footer.footer div.footer-content > * {
+  padding: 28px 30px;
+}
+
+body div.web-frame div.content-wrapper footer.footer div.footer-content div.burnicode-footer {
+  min-height: 330px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body div.web-frame div.content-wrapper footer.footer div.footer-content div.burnicode-footer div.burnicode-logo {
+  background: center/contain url("../images/burnicodelogo_textwhite.png");
+  width: 287px;
+  height: 185px;
+}
+
+body div.web-frame div.content-wrapper footer.footer div.footer-content div.links a {
+  display: block;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+body div.web-frame div.content-wrapper footer.footer div.footer-content div.find-me .social-logo {
+  font-size: 58px;
+}
+
+body div.web-frame div.content-wrapper footer.footer div.footer-content div.find-me .social-logo.github {
+  color: #fff;
+}
+
+body div.web-frame div.content-wrapper footer.footer div.footer-content div.find-me .social-logo.instagram {
+  color: #E1306C;
+}
+
+body div.web-frame div.content-wrapper footer.footer div.footer-content div.find-me .social-logo.twitter {
+  color: #1DA1F2;
+}
+
+body div.web-frame div.content-wrapper footer.footer div.footer-content div.find-me .social-logo.youtube {
+  color: #FF0000;
+}
+
+body div.web-frame div.content-wrapper footer.footer div.copyright {
+  padding: 38px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */
